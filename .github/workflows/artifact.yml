@@ -1,0 +1,14 @@
+name: APK Transfer
+on:
+  push:
+    branches: [main]
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: WorldRailDriver-v97-Review
+          path: WorldRailDriver-v97-Review.apk
+          compression-level: 0
